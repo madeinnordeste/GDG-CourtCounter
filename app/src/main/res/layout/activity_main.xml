@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent">
+
+    <!-- teams //-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+
+        <!-- team A //-->
+        <LinearLayout
+            style="@style/TeamStyles">
+
+            <TextView
+                style="@style/TextStyles"
+                android:text="Team A"/>
+
+            <TextView
+                style="@style/TextStyles"
+                android:text="0"
+                android:id="@+id/team_a_score_text_view"/>
+
+            <Button
+                style="@style/ButtonStyles"
+                android:text="+3 Points"
+                android:id="@+id/btn_team_a_3_points"
+                android:onClick="incrementScore"
+                android:tag="a:3"/>
+
+            <Button
+                style="@style/ButtonStyles"
+                android:text="+2 Points"
+                android:id="@+id/btn_team_a_2_points"
+                android:onClick="incrementScore"
+                android:tag="a:2"/>
+
+            <Button
+                style="@style/ButtonStyles"
+                android:text="free throw"
+                android:id="@+id/btn_team_a_1_point"
+                android:onClick="incrementScore"
+                android:tag="a:1"/>
+
+
+        </LinearLayout>
+
+        <!-- /team A //-->
+
+
+        <!-- team B //-->
+
+
+        <LinearLayout
+            style="@style/TeamStyles">
+
+            <TextView
+                style="@style/TextStyles"
+                android:text="Team B"
+                android:onClick="incrementScore"/>
+
+            <TextView
+                style="@style/TextStyles"
+                android:text="0"
+                android:id="@+id/team_b_score_text_view"
+                />
+
+            <Button
+                style="@style/ButtonStyles"
+                android:text="+3 Points"
+                android:id="@+id/btn_team_b_3_points"
+                android:onClick="incrementScore"
+                android:tag="b:3"/>
+
+            <Button
+                style="@style/ButtonStyles"
+                android:text="+2 Points"
+                android:id="@+id/btn_team_b_2_points"
+                android:onClick="incrementScore"
+                android:tag="b:2"/>
+
+            <Button
+                style="@style/ButtonStyles"
+                android:text="free throw"
+                android:id="@+id/btn_team_b_1_point"
+                android:onClick="incrementScore"
+                android:tag="b:1"/>
+
+
+        </LinearLayout>
+
+        <!-- /team B //-->
+
+
+    </LinearLayout>
+
+
+    <!-- /teams //-->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="RESET"
+        android:id="@+id/btn_reset"
+        android:layout_gravity="center_horizontal|bottom"
+        android:onClick="restartScore"/>
+
+
+</LinearLayout>
+
+
